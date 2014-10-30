@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ToolkitSOML>
+    <RunData step="1">
+        <Action>4</Action>
+        <State>0,0,0,0,2,0,1,0,0</State>
+        <Score>00</Score>
+    </RunData>
+    <RunData step="2">
+        <Action>5</Action>
+        <State>1,0,0,0,2,2,1,0,0</State>
+        <Score>00</Score>
+    </RunData>
+    <RunData step="3">
+        <Action>2</Action>
+        <State>1,0,2,0,2,2,1,0,0</State>
+        <Score>00</Score>
+    </RunData>
+    <RunData step="4">
+        <Action>3</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>01</Score>
+    </RunData>
+    <RunData step="5">
+        <Action>1</Action>
+        <State>0,2,0,0,1,0,0,0,0</State>
+        <Score>01</Score>
+    </RunData>
+    <RunData step="6">
+        <Action>8</Action>
+        <State>0,2,0,1,1,0,0,0,2</State>
+        <Score>01</Score>
+    </RunData>
+    <RunData step="7">
+        <Action>5</Action>
+        <State>0,2,0,1,1,2,0,0,2</State>
+        <Score>01</Score>
+    </RunData>
+    <RunData step="8">
+        <Action>0</Action>
+        <State>2,2,0,1,1,2,0,0,2</State>
+        <Score>01</Score>
+    </RunData>
+    <RunData step="9">
+        <Action>7</Action>
+        <State>2,2,1,1,1,2,0,2,2</State>
+        <Score>01</Score>
+    </RunData>
+    <RunData step="10">
+        <Action>6</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>02</Score>
+    </RunData>
+    <RunData step="11">
+        <Action>3</Action>
+        <State>0,0,0,2,0,1,0,0,0</State>
+        <Score>02</Score>
+    </RunData>
+    <RunData step="12">
+        <Action>2</Action>
+        <State>0,0,2,2,0,1,1,0,0</State>
+        <Score>02</Score>
+    </RunData>
+    <RunData step="13">
+        <Action>8</Action>
+        <State>1,0,2,2,0,1,1,0,2</State>
+        <Score>02</Score>
+    </RunData>
+    <RunData step="14">
+        <Action>4</Action>
+        <State>1,0,2,2,2,1,1,0,2</State>
+        <Score>02</Score>
+    </RunData>
+    <RunData step="15">
+        <Action>7</Action>
+        <State>1,0,2,2,2,1,1,2,2</State>
+        <Score>02</Score>
+    </RunData>
+    <RunData step="16">
+        <Action>1</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>03</Score>
+    </RunData>
+    <RunData step="17">
+        <Action>6</Action>
+        <State>0,0,0,0,0,0,2,1,0</State>
+        <Score>03</Score>
+    </RunData>
+    <RunData step="18">
+        <Action>2</Action>
+        <State>0,0,2,0,0,0,2,1,0</State>
+        <Score>03</Score>
+    </RunData>
+    <RunData step="19">
+        <Action>1</Action>
+        <State>0,2,2,0,0,0,2,1,0</State>
+        <Score>03</Score>
+    </RunData>
+    <RunData step="20">
+        <Action>4</Action>
+        <State>0,2,2,0,2,0,2,1,0</State>
+        <Score>03</Score>
+    </RunData>
+    <RunData step="21">
+        <Action>5</Action>
+        <State>0,2,2,0,2,2,2,1,0</State>
+        <Score>03</Score>
+    </RunData>
+    <RunData step="22">
+        <Action>3</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>04</Score>
+    </RunData>
+    <RunData step="23">
+        <Action>8</Action>
+        <State>0,0,0,0,0,1,0,0,2</State>
+        <Score>04</Score>
+    </RunData>
+    <RunData step="24">
+        <Action>6</Action>
+        <State>0,1,0,0,0,1,2,0,2</State>
+        <Score>04</Score>
+    </RunData>
+    <RunData step="25">
+        <Action>2</Action>
+        <State>0,1,2,0,0,1,2,0,2</State>
+        <Score>04</Score>
+    </RunData>
+    <RunData step="26">
+        <Action>3</Action>
+        <State>0,1,2,2,0,1,2,0,2</State>
+        <Score>04</Score>
+    </RunData>
+    <RunData step="27">
+        <Action>0</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>05</Score>
+    </RunData>
+    <RunData step="28">
+        <Action>2</Action>
+        <State>1,0,2,0,0,0,0,0,0</State>
+        <Score>05</Score>
+    </RunData>
+    <RunData step="29">
+        <Action>8</Action>
+        <State>1,0,2,1,0,0,0,0,2</State>
+        <Score>05</Score>
+    </RunData>
+    <RunData step="30">
+        <Action>7</Action>
+        <State>1,0,2,1,0,0,0,2,2</State>
+        <Score>05</Score>
+    </RunData>
+    <RunData step="31">
+        <Action>1</Action>
+        <State>1,2,2,1,1,0,0,2,2</State>
+        <Score>05</Score>
+    </RunData>
+    <RunData step="32">
+        <Action>6</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>06</Score>
+    </RunData>
+    <RunData step="33">
+        <Action>8</Action>
+        <State>0,0,1,0,0,0,0,0,2</State>
+        <Score>06</Score>
+    </RunData>
+    <RunData step="34">
+        <Action>4</Action>
+        <State>0,1,1,0,2,0,0,0,2</State>
+        <Score>06</Score>
+    </RunData>
+    <RunData step="35">
+        <Action>7</Action>
+        <State>0,1,1,0,2,0,1,2,2</State>
+        <Score>06</Score>
+    </RunData>
+    <RunData step="36">
+        <Action>3</Action>
+        <State>0,1,1,2,2,0,1,2,2</State>
+        <Score>06</Score>
+    </RunData>
+    <RunData step="37">
+        <Action>0</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>07</Score>
+    </RunData>
+    <RunData step="38">
+        <Action>2</Action>
+        <State>1,0,2,0,0,0,0,0,0</State>
+        <Score>07</Score>
+    </RunData>
+    <RunData step="39">
+        <Action>1</Action>
+        <State>1,2,2,0,0,0,0,0,0</State>
+        <Score>07</Score>
+    </RunData>
+    <RunData step="40">
+        <Action>7</Action>
+        <State>1,2,2,1,0,0,0,2,0</State>
+        <Score>07</Score>
+    </RunData>
+    <RunData step="41">
+        <Action>6</Action>
+        <State>1,2,2,1,0,0,2,2,0</State>
+        <Score>07</Score>
+    </RunData>
+    <RunData step="42">
+        <Action>5</Action>
+        <State>1,2,2,1,0,2,2,2,0</State>
+        <Score>07</Score>
+    </RunData>
+    <RunData step="43">
+        <Action>8</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>08</Score>
+    </RunData>
+    <RunData step="44">
+        <Action>8</Action>
+        <State>0,0,1,0,0,0,0,0,2</State>
+        <Score>08</Score>
+    </RunData>
+    <RunData step="45">
+        <Action>4</Action>
+        <State>0,0,1,1,2,0,0,0,2</State>
+        <Score>08</Score>
+    </RunData>
+    <RunData step="46">
+        <Action>5</Action>
+        <State>1,0,1,1,2,2,0,0,2</State>
+        <Score>08</Score>
+    </RunData>
+    <RunData step="47">
+        <Action>1</Action>
+        <State>1,2,1,1,2,2,0,0,2</State>
+        <Score>08</Score>
+    </RunData>
+    <RunData step="48">
+        <Action>6</Action>
+        <State>1,2,1,1,2,2,2,0,2</State>
+        <Score>08</Score>
+    </RunData>
+    <RunData step="49">
+        <Action>7</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>09</Score>
+    </RunData>
+    <RunData step="50">
+        <Action>0</Action>
+        <State>2,0,0,0,0,0,1,0,0</State>
+        <Score>09</Score>
+    </RunData>
+    <RunData step="51">
+        <Action>8</Action>
+        <State>2,0,0,0,1,0,1,0,2</State>
+        <Score>09</Score>
+    </RunData>
+    <RunData step="52">
+        <Action>2</Action>
+        <State>2,0,2,0,1,1,1,0,2</State>
+        <Score>09</Score>
+    </RunData>
+    <RunData step="53">
+        <Action>7</Action>
+        <State>2,0,2,0,1,1,1,2,2</State>
+        <Score>09</Score>
+    </RunData>
+    <RunData step="54">
+        <Action>1</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>010</Score>
+    </RunData>
+    <RunData step="55">
+        <Action>1</Action>
+        <State>0,2,0,0,0,0,0,1,0</State>
+        <Score>010</Score>
+    </RunData>
+    <RunData step="56">
+        <Action>8</Action>
+        <State>0,2,0,0,0,1,0,1,2</State>
+        <Score>010</Score>
+    </RunData>
+    <RunData step="57">
+        <Action>6</Action>
+        <State>0,2,0,0,0,1,2,1,2</State>
+        <Score>010</Score>
+    </RunData>
+    <RunData step="58">
+        <Action>2</Action>
+        <State>0,2,2,0,1,1,2,1,2</State>
+        <Score>010</Score>
+    </RunData>
+    <RunData step="59">
+        <Action>3</Action>
+        <State>0,2,2,2,1,1,2,1,2</State>
+        <Score>010</Score>
+    </RunData>
+    <RunData step="60">
+        <Action>0</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>011</Score>
+    </RunData>
+    <RunData step="61">
+        <Action>4</Action>
+        <State>0,0,0,0,2,1,0,0,0</State>
+        <Score>011</Score>
+    </RunData>
+    <RunData step="62">
+        <Action>1</Action>
+        <State>0,2,1,0,2,1,0,0,0</State>
+        <Score>011</Score>
+    </RunData>
+    <RunData step="63">
+        <Action>0</Action>
+        <State>2,2,1,1,2,1,0,0,0</State>
+        <Score>011</Score>
+    </RunData>
+    <RunData step="64">
+        <Action>7</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>012</Score>
+    </RunData>
+    <RunData step="65">
+        <Action>7</Action>
+        <State>0,0,0,1,0,0,0,2,0</State>
+        <Score>012</Score>
+    </RunData>
+    <RunData step="66">
+        <Action>8</Action>
+        <State>0,0,0,1,0,0,1,2,2</State>
+        <Score>012</Score>
+    </RunData>
+    <RunData step="67">
+        <Action>5</Action>
+        <State>0,0,0,1,0,2,1,2,2</State>
+        <Score>012</Score>
+    </RunData>
+    <RunData step="68">
+        <Action>2</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>013</Score>
+    </RunData>
+    <RunData step="69">
+        <Action>7</Action>
+        <State>0,0,0,1,0,0,0,2,0</State>
+        <Score>013</Score>
+    </RunData>
+    <RunData step="70">
+        <Action>2</Action>
+        <State>0,0,2,1,0,1,0,2,0</State>
+        <Score>013</Score>
+    </RunData>
+    <RunData step="71">
+        <Action>8</Action>
+        <State>0,0,2,1,0,1,0,2,2</State>
+        <Score>013</Score>
+    </RunData>
+    <RunData step="72">
+        <Action>4</Action>
+        <State>0,0,2,1,2,1,0,2,2</State>
+        <Score>013</Score>
+    </RunData>
+    <RunData step="73">
+        <Action>0</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>014</Score>
+    </RunData>
+    <RunData step="74">
+        <Action>7</Action>
+        <State>0,0,0,0,0,0,1,2,0</State>
+        <Score>014</Score>
+    </RunData>
+    <RunData step="75">
+        <Action>3</Action>
+        <State>0,0,0,2,0,0,1,2,0</State>
+        <Score>014</Score>
+    </RunData>
+    <RunData step="76">
+        <Action>1</Action>
+        <State>0,2,0,2,0,1,1,2,0</State>
+        <Score>014</Score>
+    </RunData>
+    <RunData step="77">
+        <Action>2</Action>
+        <State>0,2,2,2,0,1,1,2,0</State>
+        <Score>014</Score>
+    </RunData>
+    <RunData step="78">
+        <Action>4</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>015</Score>
+    </RunData>
+    <RunData step="79">
+        <Action>3</Action>
+        <State>0,0,0,2,0,0,0,1,0</State>
+        <Score>015</Score>
+    </RunData>
+    <RunData step="80">
+        <Action>4</Action>
+        <State>0,0,1,2,2,0,0,1,0</State>
+        <Score>015</Score>
+    </RunData>
+    <RunData step="81">
+        <Action>5</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>016</Score>
+    </RunData>
+    <RunData step="82">
+        <Action>6</Action>
+        <State>0,1,0,0,0,0,2,0,0</State>
+        <Score>016</Score>
+    </RunData>
+    <RunData step="83">
+        <Action>3</Action>
+        <State>0,1,0,2,1,0,2,0,0</State>
+        <Score>016</Score>
+    </RunData>
+    <RunData step="84">
+        <Action>5</Action>
+        <State>0,1,0,2,1,2,2,0,0</State>
+        <Score>016</Score>
+    </RunData>
+    <RunData step="85">
+        <Action>2</Action>
+        <State>0,1,2,2,1,2,2,0,0</State>
+        <Score>016</Score>
+    </RunData>
+    <RunData step="86">
+        <Action>0</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>017</Score>
+    </RunData>
+    <RunData step="87">
+        <Action>2</Action>
+        <State>0,0,2,0,0,0,0,0,0</State>
+        <Score>017</Score>
+    </RunData>
+    <RunData step="88">
+        <Action>5</Action>
+        <State>0,0,2,0,0,2,0,0,0</State>
+        <Score>017</Score>
+    </RunData>
+    <RunData step="89">
+        <Action>8</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>018</Score>
+    </RunData>
+    <RunData step="90">
+        <Action>4</Action>
+        <State>0,1,0,0,2,0,0,0,0</State>
+        <Score>018</Score>
+    </RunData>
+    <RunData step="91">
+        <Action>2</Action>
+        <State>0,1,2,0,2,0,0,0,0</State>
+        <Score>018</Score>
+    </RunData>
+    <RunData step="92">
+        <Action>3</Action>
+        <State>0,1,2,2,2,0,1,0,0</State>
+        <Score>018</Score>
+    </RunData>
+    <RunData step="93">
+        <Action>7</Action>
+        <State>1,1,2,2,2,0,1,2,0</State>
+        <Score>018</Score>
+    </RunData>
+    <RunData step="94">
+        <Action>8</Action>
+        <State>1,1,2,2,2,0,1,2,2</State>
+        <Score>018</Score>
+    </RunData>
+    <RunData step="95">
+        <Action>5</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>019</Score>
+    </RunData>
+    <RunData step="96">
+        <Action>6</Action>
+        <State>0,0,1,0,0,0,2,0,0</State>
+        <Score>019</Score>
+    </RunData>
+    <RunData step="97">
+        <Action>5</Action>
+        <State>0,0,1,0,0,2,2,1,0</State>
+        <Score>019</Score>
+    </RunData>
+    <RunData step="98">
+        <Action>4</Action>
+        <State>0,0,1,0,2,2,2,1,0</State>
+        <Score>019</Score>
+    </RunData>
+    <RunData step="99">
+        <Action>1</Action>
+        <State>0,2,1,0,2,2,2,1,0</State>
+        <Score>019</Score>
+    </RunData>
+    <RunData step="100">
+        <Action>3</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>020</Score>
+    </RunData>
+</ToolkitSOML>

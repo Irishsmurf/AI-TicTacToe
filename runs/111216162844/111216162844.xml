@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ToolkitSOML>
+    <RunData step="1">
+        <Action>5</Action>
+        <State>0,0,1,0,0,2,0,0,0</State>
+        <Score>00</Score>
+    </RunData>
+    <RunData step="2">
+        <Action>6</Action>
+        <State>0,0,1,0,0,2,2,1,0</State>
+        <Score>00</Score>
+    </RunData>
+    <RunData step="3">
+        <Action>8</Action>
+        <State>0,0,1,0,0,2,2,1,2</State>
+        <Score>00</Score>
+    </RunData>
+    <RunData step="4">
+        <Action>0</Action>
+        <State>2,0,1,0,0,2,2,1,2</State>
+        <Score>00</Score>
+    </RunData>
+    <RunData step="5">
+        <Action>1</Action>
+        <State>2,2,1,0,0,2,2,1,2</State>
+        <Score>00</Score>
+    </RunData>
+    <RunData step="6">
+        <Action>4</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>01</Score>
+    </RunData>
+    <RunData step="7">
+        <Action>5</Action>
+        <State>0,0,0,1,0,2,0,0,0</State>
+        <Score>01</Score>
+    </RunData>
+    <RunData step="8">
+        <Action>1</Action>
+        <State>1,2,0,1,0,2,0,0,0</State>
+        <Score>01</Score>
+    </RunData>
+    <RunData step="9">
+        <Action>4</Action>
+        <State>0,0,0,0,0,0,0,0,0</State>
+        <Score>11</Score>
+    </RunData>
+</ToolkitSOML>

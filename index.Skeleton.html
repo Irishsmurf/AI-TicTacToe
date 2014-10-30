@@ -1,0 +1,88 @@
+
+<head>
+<title> "Cops and robbers" world </title>
+</head>
+
+<br>
+
+<H1> "Cops and robbers" world </H1>
+ 
+A cop chases a robber across a 1-dimensional grid.
+If the robber is caught, it resets to start position.
+Score = Number of times robber gets caught in a run.
+
+<p>
+<PRE>
+
+</PRE>
+
+
+<H1>Source code of World
+</H1>
+
+<A HREF="SkeletonWorld.java"><B>SkeletonWorld.java</B></A>
+
+<PRE>
+
+</PRE>
+
+
+<H1>Source code of sample Mind
+</H1>
+
+<A HREF="SkeletonMind.java"><B>SkeletonMind.java</B></A>
+
+<PRE>
+
+</PRE>
+
+<H1> State </H1>
+
+State   = "c,r" where:
+<ul>
+<li>
+c = position of cop on the 1-dimensional grid, takes values 0 to ( SkeletonWorld.GRID_SIZE - 1 )
+<li>
+r = position of robber
+</ul>
+<PRE>
+
+</PRE>
+
+
+<H1> Action </H1>
+
+ Action   = "i" where i takes values:
+<ul>
+<li>                     
+SkeletonWorld.ACTION_LEFT
+(move left)
+
+<li> SkeletonWorld.ACTION_RIGHT
+(move right)	
+</ul>
+<p>
+
+ 
+ Minds may return extra    information (which can be read by other Minds, but which the World will ignore):
+<br>
+  action = "i,w1,w2,...,wn"
+
+
+<PRE>
+
+</PRE>
+
+
+<H1> Score </H1>
+
+Score = "s1,s2" where:
+<ul>
+<li>  s1 = number of times robber was caught (primary score)
+<li>  s2 = number of times robber was caught due to our action, not robber's action (secondary score)
+</ul>
+
+<PRE>
+
+</PRE>
+

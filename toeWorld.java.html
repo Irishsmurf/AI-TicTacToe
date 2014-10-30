@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>~/AI/TicTacToe/toeWorld.java.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+.Special { color: #ff6060; font-weight: bold; }
+.Statement { color: #ffff00; font-weight: bold; }
+.Comment { color: #00ffff; font-weight: bold; }
+.Type { color: #00ff00; font-weight: bold; }
+.Constant { color: #ff40ff; font-weight: bold; }
+pre { font-family: monospace; color: #ffffff; background-color: #000000; }
+body { font-family: monospace; color: #ffffff; background-color: #000000; }
+.PreProc { color: #8080ff; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="PreProc">import</span> java.awt.image.*;
+<span class="PreProc">import</span> java.io.*;
+<span class="PreProc">import</span> java.util.*;
+<span class="PreProc">import</span> javax.imageio.*;
+
+<span class="PreProc">import</span> org.w2mind.net.*;
+
+<span class="Comment">/*</span>
+
+<span class="Comment">0   1   2</span>
+<span class="Comment">3   4   5</span>
+<span class="Comment">6   7   8</span>
+
+
+<span class="Comment">*/</span>
+
+
+<span class="Type">public</span> <span class="Type">class</span> toeWorld <span class="Type">extends</span> AbstractWorld
+{
+    <span class="Type">public</span> <span class="Type">static</span> <span class="Type">final</span> <span class="Type">int</span> GRID_X = <span class="Constant">3</span>;
+    <span class="Type">public</span> <span class="Type">static</span> <span class="Type">final</span> <span class="Type">int</span> GRID_Y = <span class="Constant">3</span>;
+    <span class="Type">public</span> <span class="Type">static</span> <span class="Type">final</span> <span class="Type">int</span> SQUARE = GRID_X * GRID_Y;
+
+    <span class="Type">int</span>[] places = {<span class="Constant">0</span>,<span class="Constant">0</span>,<span class="Constant">0</span>,<span class="Constant">0</span>,<span class="Constant">0</span>,<span class="Constant">0</span>,<span class="Constant">0</span>,<span class="Constant">0</span>,<span class="Constant">0</span>};<span class="Comment">//Init places</span>
+
+
+
+
+    <span class="Type">int</span> o_wins;
+    <span class="Type">int</span> x_wins;
+    <span class="Type">int</span> draw;
+    List&lt;String&gt; scorecols;
+    <span class="Type">int</span> timestep;
+    <span class="Type">int</span> MAX_STEPS = <span class="Constant">100</span>;
+    <span class="Type">int</span> numPlaces = <span class="Constant">9</span>;
+    String IMAGE_DIR = <span class="Constant">&quot;images&quot;</span>;
+    String IMG_X = IMAGE_DIR+<span class="Constant">&quot;/x.jpg&quot;</span>;
+    String IMG_O = IMAGE_DIR+<span class="Constant">&quot;/o.jpg&quot;</span>;
+    String IMG_B = IMAGE_DIR+<span class="Constant">&quot;/blank.jpg&quot;</span>;
+    <span class="Type">private</span> <span class="Type">transient</span> ArrayList&lt;BufferedImage&gt; buf;
+    <span class="Type">private</span> <span class="Type">transient</span> InputStream xStream, oStream, bStream;
+    <span class="Type">private</span> <span class="Type">transient</span> BufferedImage xImg, oImg, bImg;
+
+    <span class="Type">int</span> imgWidth, imgHeight;
+    <span class="Type">private</span> <span class="Type">boolean</span> checkWin(<span class="Type">int</span> type)
+    {
+        <span class="Statement">if</span>(places[<span class="Constant">0</span>] == type &amp;&amp; places[<span class="Constant">1</span>] == type &amp;&amp; places[<span class="Constant">2</span>] == type)
+            <span class="Statement">return</span> <span class="Constant">true</span>;
+        <span class="Statement">else</span> <span class="Statement">if</span>(places[<span class="Constant">0</span>] == type &amp;&amp; places[<span class="Constant">3</span>] == type &amp;&amp; places[<span class="Constant">6</span>] == type)
+            <span class="Statement">return</span> <span class="Constant">true</span>;
+        <span class="Statement">else</span> <span class="Statement">if</span>(places[<span class="Constant">0</span>] == type &amp;&amp; places[<span class="Constant">4</span>] == type &amp;&amp; places[<span class="Constant">8</span>] == type)
+            <span class="Statement">return</span> <span class="Constant">true</span>;
+        <span class="Statement">else</span> <span class="Statement">if</span>(places[<span class="Constant">1</span>] == type &amp;&amp; places[<span class="Constant">4</span>] == type &amp;&amp; places[<span class="Constant">7</span>] == type)
+            <span class="Statement">return</span> <span class="Constant">true</span>;
+        <span class="Statement">else</span> <span class="Statement">if</span>(places[<span class="Constant">2</span>] == type &amp;&amp; places[<span class="Constant">5</span>] == type &amp;&amp; places[<span class="Constant">8</span>] == type)
+            <span class="Statement">return</span> <span class="Constant">true</span>;
+        <span class="Statement">else</span> <span class="Statement">if</span>(places[<span class="Constant">3</span>] == type &amp;&amp; places[<span class="Constant">4</span>] == type &amp;&amp; places[<span class="Constant">5</span>] == type)
+            <span class="Statement">return</span> <span class="Constant">true</span>;
+        <span class="Statement">else</span> <span class="Statement">if</span>(places[<span class="Constant">6</span>] == type &amp;&amp; places[<span class="Constant">7</span>] == type &amp;&amp; places[<span class="Constant">8</span>] == type)
+            <span class="Statement">return</span> <span class="Constant">true</span>;
+        <span class="Statement">else</span>
+            <span class="Statement">return</span> <span class="Constant">false</span>;
+    }
+    <span class="Type">private</span> <span class="Type">int</span> randPos()
+    {
+        Random t = <span class="Statement">new</span> Random();
+        <span class="Type">int</span> ranX = t.nextInt(SQUARE);
+        <span class="Type">int</span> i = <span class="Constant">0</span>;
+        <span class="Statement">while</span>(places[ranX] != <span class="Constant">0</span>)
+        {
+            ranX = t.nextInt(SQUARE);
+            i++;
+            <span class="Statement">if</span>(i &gt; SQUARE)
+                <span class="Statement">break</span>;
+        }
+        <span class="Statement">return</span> ranX;
+    }
+
+    <span class="Comment">/*private int putX()</span>
+<span class="Comment">    {</span>
+<span class="Comment">        //Place an X</span>
+<span class="Comment">    }*/</span>
+
+    <span class="Type">private</span> <span class="Type">boolean</span> runFinished()
+    {
+            <span class="Statement">return</span> (timestep &gt;= MAX_STEPS);
+    }
+
+    <span class="Type">private</span> <span class="Type">void</span> initImages()
+    {
+        <span class="Statement">if</span>( imagesDesired)
+        {
+            buf = <span class="Statement">new</span> ArrayList&lt;BufferedImage&gt;(); <span class="Comment">//Buffer cleared</span>
+            <span class="Statement">if</span>(xStream == <span class="Constant">null</span>)
+            {
+                <span class="Statement">try</span>
+                {
+                    ImageIO.setUseCache(<span class="Constant">false</span>);
+                    xStream = getClass().getResourceAsStream( IMG_X );
+                    oStream = getClass().getResourceAsStream( IMG_O);
+                    bStream = getClass().getResourceAsStream( IMG_B);
+
+                    bImg = javax.imageio.ImageIO.read(bStream);
+                    xImg = javax.imageio.ImageIO.read(xStream);
+                    oImg = javax.imageio.ImageIO.read(oStream);
+
+                    imgWidth = xImg.getWidth();
+                    imgHeight = xImg.getHeight();
+                }
+                <span class="Statement">catch</span>(IOException e)
+                {}
+            }
+        }
+    }
+
+    <span class="Type">private</span> <span class="Type">void</span> addImage()
+    {
+        <span class="Statement">if</span> (imagesDesired)
+        {
+            BufferedImage img = <span class="Statement">new</span> BufferedImage( ( imgWidth * GRID_X), (imgHeight * GRID_Y), BufferedImage.TYPE_INT_RGB);
+
+            <span class="Statement">for</span>(<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; places.length; i++)
+            {
+                <span class="Statement">if</span>(places[i] == <span class="Constant">1</span>) <span class="Comment">//Place an X</span>
+                {
+                    <span class="Comment">//image, create, draw         (Imag, X Cord,  Y Cord)</span>
+                    img.createGraphics().drawImage(xImg, (i % GRID_X), (i / GRID_Y), <span class="Constant">null</span>);
+                }
+                <span class="Statement">else</span> <span class="Statement">if</span>(places[i] == <span class="Constant">2</span>)<span class="Comment">// Place an O</span>
+                {
+                    img.createGraphics().drawImage(oImg, (i % GRID_X)*imgWidth, (i / GRID_Y)*imgHeight, <span class="Constant">null</span>);
+                }
+                <span class="Statement">else</span> <span class="Statement">if</span>(places[i] == <span class="Constant">0</span>)
+                {
+                    img.createGraphics().drawImage(bImg, (i % GRID_X)*imgWidth,(i/GRID_Y)*imgHeight, <span class="Constant">null</span>);
+                }
+            }
+
+            buf.add(img);
+
+        }
+    }
+
+    <span class="Type">public</span> <span class="Type">void</span> newrun() <span class="Type">throws</span> RunError
+    {
+        timestep = <span class="Constant">0</span>;
+        x_wins = <span class="Constant">0</span>;
+        o_wins = <span class="Constant">0</span>;
+        draw = <span class="Constant">0</span>;
+
+        randPos();
+        scorecols = <span class="Statement">new</span> LinkedList&lt;String&gt;();
+        scorecols.add(<span class="Constant">&quot;X Wins&quot;</span>);
+        scorecols.add(<span class="Constant">&quot;O Wins&quot;</span>);
+        <span class="Comment">//Finish this</span>
+    }
+
+    <span class="Type">public</span> <span class="Type">void</span> endrun() <span class="Type">throws</span> RunError {}
+
+    <span class="Type">public</span> State getstate() <span class="Type">throws</span> RunError
+    {
+        String x = String.format(places[<span class="Constant">0</span>]+<span class="Constant">&quot;,&quot;</span>+places[<span class="Constant">1</span>]+<span class="Constant">&quot;,&quot;</span>+places[<span class="Constant">2</span>]+<span class="Constant">&quot;,&quot;</span>+places[<span class="Constant">3</span>]+<span class="Constant">&quot;,&quot;</span>+places[<span class="Constant">4</span>]+<span class="Constant">&quot;,&quot;</span>+places[<span class="Constant">5</span>]+<span class="Constant">&quot;,&quot;</span>+places[<span class="Constant">6</span>]+<span class="Constant">&quot;,&quot;</span>+places[<span class="Constant">7</span>]+<span class="Constant">&quot;,&quot;</span>+places[<span class="Constant">8</span>]);
+
+        <span class="Statement">return</span> <span class="Statement">new</span> State (x);
+    }
+
+    <span class="Type">public</span> State takeaction(Action action) <span class="Type">throws</span> RunError
+    {
+        initImages();
+        addImage();
+        String s = action.toString();
+        String[] a = s.split(<span class="Constant">&quot;,&quot;</span>);
+        <span class="Type">int</span> tmp = Integer.parseInt(a[<span class="Constant">0</span>]);
+
+        <span class="Comment">//O's Go</span>
+        <span class="Statement">if</span>(places[tmp] == <span class="Constant">0</span>)
+        {
+            places[tmp] = <span class="Constant">2</span>;
+            System.out.printf(<span class="Constant">&quot;O moves to:</span><span class="Special">\t</span><span class="Constant"> %d</span><span class="Special">\n</span><span class="Constant">&quot;</span>, tmp+<span class="Constant">1</span>);
+        }
+
+        addImage();
+
+        <span class="Statement">if</span>(checkWin(<span class="Constant">2</span>))
+        {
+            System.out.printf(<span class="Constant">&quot;O Wins!</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+            o_wins++;
+            printboard();
+            addImage();
+            clearBoard();
+            randPos();
+        }
+        <span class="Statement">else</span>
+        {
+            <span class="Comment">//X's go.</span>
+            Random rand = <span class="Statement">new</span> Random();
+            <span class="Type">int</span> ran = rand.nextInt(SQUARE-<span class="Constant">1</span>);
+
+            <span class="Statement">if</span>(places[ran] == <span class="Constant">0</span>)
+            {
+                rand.nextInt(SQUARE-<span class="Constant">1</span>);
+                places[ran] = <span class="Constant">1</span>;
+                System.out.printf(<span class="Constant">&quot;X moves to:</span><span class="Special">\t</span><span class="Constant"> %d</span><span class="Special">\n</span><span class="Constant">&quot;</span>, tmp+<span class="Constant">1</span>);
+            }
+
+            <span class="Statement">if</span>(checkWin(<span class="Constant">1</span>))
+            {
+                System.out.printf(<span class="Constant">&quot;X Wins!</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+                x_wins++;
+                addImage();
+                printboard();
+                clearBoard();
+                randPos();
+            }
+        }
+
+        numPlaces--;
+        <span class="Statement">if</span>(numPlaces == <span class="Constant">0</span>)
+        {
+            draw++;
+            addImage();
+            printboard();
+            clearBoard();
+            randPos();
+        }
+        timestep++;
+        <span class="Statement">if</span>( runFinished() )
+        {
+            addImage();
+        }
+        <span class="Statement">return</span> getstate();
+    }
+
+
+    <span class="Type">public</span> Score getscore() <span class="Type">throws</span> RunError
+    {
+        String s = String.format(<span class="Constant">&quot;%d%d%d&quot;</span>, x_wins, o_wins, draw);
+        List&lt;Comparable&gt; values = <span class="Statement">new</span> LinkedList&lt;Comparable&gt;();
+        values.add(x_wins);
+        values.add(o_wins);
+        values.add(draw);
+        <span class="Statement">return</span> <span class="Statement">new</span> Score(s, runFinished(), scorecols, values);
+    }
+
+    <span class="Type">public</span> ArrayList&lt;BufferedImage&gt; getimage() <span class="Type">throws</span> RunError
+    {
+        <span class="Statement">return</span> buf;
+    }
+
+    <span class="Type">void</span> clearBoard()
+    {
+        initImages();
+        <span class="Statement">for</span>(<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; <span class="Constant">9</span>; i++)
+        {
+            places[i] = <span class="Constant">0</span>;
+        }
+    }
+
+    <span class="Type">void</span> printboard()
+    {
+        <span class="Statement">for</span>(<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; <span class="Constant">9</span>; i++)
+        {
+            System.out.printf(<span class="Constant">&quot; %d &quot;</span>, places[i]);
+            <span class="Statement">if</span>((i+<span class="Constant">1</span>) % <span class="Constant">3</span> == <span class="Constant">0</span> &amp;&amp; i != <span class="Constant">0</span>)
+            {
+                System.out.print(<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+            }
+        }
+        numPlaces = <span class="Constant">9</span>;
+        System.out.print(<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+    }
+
+}
+
+
+
+</pre>
+</body>
+</html>
